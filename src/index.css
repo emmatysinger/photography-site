@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
+@layer base {
+  body {
+    @apply overflow-hidden text-primary font-secondary bg-white;
+  }
+  .h1 {
+    @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+  }
+  .section {
+    @apply h-screen w-screen;
+  }
+  .btn {
+    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+  }
+  .cover {
+    @apply hidden group-hover:block absolute bottom-0 bg-white/50 w-full h-full
+  }
+  .cover p {
+    @apply flex justify-center items-center h-full font-primary font-bold text-primary text-[2rem]
+  }
+  .model {
+    @apply fixed top-0 left-0 flex justify-center items-center 
+    bg-black opacity-0 invisible overflow-hidden scale-0 z-[999] 
+    transition-opacity duration-500 transition-transform 
+  }
+  .model.open {
+    @apply visible opacity-100 scale-100 
+  }
+}
