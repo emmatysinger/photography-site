@@ -1,1 +1,1 @@
-# photography-site
+# photography starter
